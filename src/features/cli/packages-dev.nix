@@ -28,6 +28,9 @@
     GOBIN = "$HOME/go/bin";
 
     RUST_SRC_PATH = "${unstable.rust.packages.stable.rustPlatform.rustLibSrc}";
+
+    # npm's default global prefix is the read-only nodejs store path, so install into ~/.local instead
+    NPM_CONFIG_PREFIX = "$HOME/.local";
   };
 
   environment.localBinInPath = true;
