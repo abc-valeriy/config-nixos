@@ -19,12 +19,12 @@
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.abc-valera = import ../../features/home/home-manager.nix;
+  home-manager.users.abc-valeriy = import ../../features/home/home-manager.nix;
   home-manager.extraSpecialArgs = { inherit dotfiles; };
 
   # WSL-specific settings
   wsl.enable = true;
-  wsl.defaultUser = "abc-valera";
+  wsl.defaultUser = "abc-valeriy";
 
   # Disable network manager in WSL
   networking.networkmanager.enable = false;

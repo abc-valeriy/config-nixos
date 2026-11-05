@@ -6,10 +6,10 @@ Clone the repo into the home directory:
 
 ```
 cd
-mkdir -p repos/abc-valera
-cd repos/abc-valera
+mkdir -p repos/abc-valeriy
+cd repos/abc-valeriy
 nix-shell -p git
-git clone https://github.com/abc-valera/config-nixos.git
+git clone https://github.com/abc-valeriy/config-nixos.git
 ```
 
 **If using NixOS**, copy the hardware configuration from `/etc/nixos` into `src/cmd/nixos/hardware/<machine-name>` if it doesn't already exist. The `/etc/nixos` directory can then be removed entirely:
@@ -22,10 +22,10 @@ Then apply the configuration (replace `wsl` or `elitebook25` with the target hos
 
 ```
 # WSL
-sudo nixos-rebuild switch --flake ~/repos/abc-valera/config-nixos#wsl
+sudo nixos-rebuild switch --flake ~/repos/abc-valeriy/config-nixos#wsl
 
 # Bare metal
-sudo nixos-rebuild switch --flake ~/repos/abc-valera/config-nixos#elitebook25
+sudo nixos-rebuild switch --flake ~/repos/abc-valeriy/config-nixos#elitebook25
 ```
 
 On the first run, Nix will create a `flake.lock` file pinning all input versions.
@@ -35,15 +35,15 @@ On the first run, Nix will create a `flake.lock` file pinning all input versions
 To update all flake inputs to their latest versions and rebuild:
 
 ```
-sudo nix flake update --flake ~/repos/abc-valera/config-nixos
-sudo nixos-rebuild switch --flake ~/repos/abc-valera/config-nixos#<host>
+sudo nix flake update --flake ~/repos/abc-valeriy/config-nixos
+sudo nixos-rebuild switch --flake ~/repos/abc-valeriy/config-nixos#<host>
 ```
 
 To update a single input (e.g. only `nixpkgs-unstable`):
 
 ```
-sudo nix flake update nixpkgs-unstable --flake ~/repos/abc-valera/config-nixos
-sudo nixos-rebuild switch --flake ~/repos/abc-valera/config-nixos#<host>
+sudo nix flake update nixpkgs-unstable --flake ~/repos/abc-valeriy/config-nixos
+sudo nixos-rebuild switch --flake ~/repos/abc-valeriy/config-nixos#<host>
 ```
 
 ## Updating to a next major system version
@@ -51,8 +51,8 @@ sudo nixos-rebuild switch --flake ~/repos/abc-valera/config-nixos#<host>
 Edit the versions for the inputs in `flake.nix` to match the new release (e.g. bump `26.05` → `26.11`). Then run:
 
 ```
-sudo nix flake update --flake ~/repos/abc-valera/config-nixos
-sudo nixos-rebuild switch --flake ~/repos/abc-valera/config-nixos#<host>
+sudo nix flake update --flake ~/repos/abc-valeriy/config-nixos
+sudo nixos-rebuild switch --flake ~/repos/abc-valeriy/config-nixos#<host>
 ```
 
 ## Other useful commands
@@ -60,7 +60,7 @@ sudo nixos-rebuild switch --flake ~/repos/abc-valera/config-nixos#<host>
 SSH keys can be generated via:
 
 ```
-ssh-keygen -t ed25519 -C "valeriy.tymofieiev@gmail.com" -f /home/abc-valera/.ssh/id_ed_personal
+ssh-keygen -t ed25519 -C "valeriy.tymofieiev@gmail.com" -f /home/abc-valeriy/.ssh/id_ed_personal
 ```
 
 To manually run garbage collector:

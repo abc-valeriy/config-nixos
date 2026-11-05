@@ -6,8 +6,8 @@
 # home-manager is used only to symlink the files to the home folder
 
 {
-  home.username = "abc-valera";
-  home.homeDirectory = "/home/abc-valera";
+  home.username = "abc-valeriy";
+  home.homeDirectory = "/home/abc-valeriy";
 
   home.sessionPath = [ "$GOBIN" ];
 
@@ -33,22 +33,22 @@
       source = ./git-ssh-sign.bash;
     };
 
-    "repos/abc-valera/.gitconfig" = {
+    "repos/abc-valeriy/.gitconfig" = {
       force = true;
       text = ''
         [user]
-            name = abc-valera
+            name = abc-valeriy
             email = valeriy.tymofieiev@gmail.com
-            signingKey = /home/abc-valera/.ssh/id_ed_personal
+            signingKey = /home/abc-valeriy/.ssh/id_ed_personal
 
         [github]
-            user = abc-valera
+            user = abc-valeriy
 
         [url "github-personal:"]
             insteadOf = git@github.com:
 
         [gpg "ssh"]
-            program = /home/abc-valera/.local/bin/git-ssh-sign
+            program = /home/abc-valeriy/.local/bin/git-ssh-sign
       '';
     };
 
@@ -56,18 +56,18 @@
       force = true;
       text = ''
         [user]
-            name = abc-valera
+            name = abc-valeriy
             email = valeriy.tymofieiev@gmail.com
-            signingKey = /home/abc-valera/.ssh/id_ed_personal
+            signingKey = /home/abc-valeriy/.ssh/id_ed_personal
 
         [github]
-            user = abc-valera
+            user = abc-valeriy
 
         [url "github-personal:"]
             insteadOf = git@github.com:
 
         [gpg "ssh"]
-            program = /home/abc-valera/.local/bin/git-ssh-sign
+            program = /home/abc-valeriy/.local/bin/git-ssh-sign
       '';
     };
 
@@ -77,7 +77,7 @@
         [user]
             name = valeriy-o3c
             email = valeriy@o3c.no
-            signingKey = /home/abc-valera/.ssh/id_ed_o3c
+            signingKey = /home/abc-valeriy/.ssh/id_ed_o3c
 
         [github]
             user = valeriy-o3c
@@ -86,7 +86,7 @@
             insteadOf = git@github.com:
 
         [gpg "ssh"]
-            program = /home/abc-valera/.local/bin/git-ssh-sign
+            program = /home/abc-valeriy/.local/bin/git-ssh-sign
       '';
     };
   };

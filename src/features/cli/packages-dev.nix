@@ -95,5 +95,5 @@
     package = pkgs.docker_29;
   };
   # Add the user to the "docker" group to run docker without sudo
-  users.users.abc-valera.extraGroups = [ "docker" ];
+  users.users.abc-valeriy.extraGroups = [ "docker" ];
 }

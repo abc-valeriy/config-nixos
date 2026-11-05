@@ -1,5 +1,5 @@
 {
-  description = "abc-valera NixOS configuration";
+  description = "abc-valeriy NixOS configuration";
 
   inputs = {
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -16,10 +16,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dotfiles.url = "github:abc-valera/dotfiles/main";
+    dotfiles.url = "github:abc-valeriy/dotfiles/main";
 
     run-sh = {
-      url = "github:abc-valera/run.sh/main";
+      url = "github:abc-valeriy/run.sh/main";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };

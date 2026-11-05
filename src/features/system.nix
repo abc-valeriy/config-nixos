@@ -32,7 +32,7 @@
   ];
 
   # Hostname
-  networking.hostName = "abc-valera-elitebook25";
+  networking.hostName = "abc-valeriy-elitebook25";
 
   # Time zone
   time.timeZone = "Europe/Kyiv";
@@ -52,7 +52,7 @@
   };
 
   # User account
-  users.users.abc-valera = {
+  users.users.abc-valeriy = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
